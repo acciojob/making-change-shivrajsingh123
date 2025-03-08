@@ -1,13 +1,13 @@
 const makeChange = (c) => {
   // your name her
-	let ch = {
-        q: Math.floor(amount / 25),  // Number of quarters
-        d: Math.floor((amount % 25) / 10),  // Remaining amount converted to dimes
-        n: Math.floor((amount % 10) / 5),  // Remaining amount converted to nickels
-        p: amount % 5  // Remaining amount as pennies
-    };
+	 c = parseInt(c); // Ensure input is treated as a number
 
-    return ch;
+  return {
+    q: Math.floor(c / 25), // Number of quarters
+    d: Math.floor((c % 25) / 10), // Number of dimes
+    n: Math.floor((c % 10) / 5), // Number of nickels
+    p: c % 5 // Number of pennies
+  };
 };
 
 // Do not the change the code below
